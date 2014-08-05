@@ -15,11 +15,10 @@ class GzipperPlugin(Plugin):
 
     def begin_site(self):
         self.files = []
-        self.exts = set('html', 'css', 'js')
         try:
             self.exts = set(self.site.config.gzipper.extensions)
         except AttributeError:
-            pass
+            self.exts = set(['html', 'css', 'js'])
 
     def text_resource_complete(self, resource, text):
         self.binary_resource_complete(resource)

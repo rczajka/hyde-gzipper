@@ -33,5 +33,5 @@ setup(name=PROJECT,
             'Programming Language :: Python',
             'Topic :: Internet :: WWW/HTTP :: Site Management',
         ],
-      zip_safe=False,
+      zip_safe=True,
 )
